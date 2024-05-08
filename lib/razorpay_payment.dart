@@ -16,12 +16,16 @@ class _RazorpayPaymentState extends State<RazorpayPayment> {
   void openCheckout(amount) async {
     amount = amount * 100;
     var options = {
-      'key': 'rzp_test_EvbvmLyM4daKbK',
-      'amount': 5000, //in the smallest currency sub-unit.
+      'key': 'rzp_test_HA7UFGch9et5WG',
+      'amount': amount, //in the smallest currency sub-unit.
       'name': 'Avinash Magar',
-      'timeout': 60,
-      'wallet': {'gpay'},
-      'prefill': {'contact': '7058700755', 'email': 'avinashmagar15@gmail.com'}
+      // 'order_id': 'order_EMBFqjDHEEn80l', // Generate order_id using Orders API
+      'description': 'Fine T-Shirt',
+      'timeout': 60, // in seconds
+      'prefill': {
+        'contact': '7058700755',
+        'email': 'avinashmagar15@gmail.com',
+      }
     };
     try {
       _razorpay.open(options);
