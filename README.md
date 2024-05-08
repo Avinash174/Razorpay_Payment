@@ -1,6 +1,6 @@
-# razorpay_payment
+# Razorpay Payment
 
-A new Flutter project.
+A New Razorpay Payment Gateway.
 
 ## Getting Started
 
